@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lost and Found System</title>
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h1>ʟᴏꜱᴛ ᴀɴᴅ ꜰᴏᴜɴᴅ ꜱʏꜱᴛᴇᴍ</h1>
+
+      <!-- AUTH SECTION -->
+      <div id="auth">
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button id="loginBtn" type="button">Login</button>
+        <button id="registerBtn" type="button">Register</button>
+      </div>
+
+      <!-- APP SECTION -->
+      <div id="app" style="display:none;">
+        <div style="position: sticky; top: 0; background: rgba(0,0,0,0.3); padding-bottom: 10px;">
+          <h2>Welcome!</h2>
+          <button id="logoutBtn" type="button">Logout</button>
+        </div>
+
+        <hr>
+
+        <form id="itemForm">
+          <select id="type">
+            <option value="Lost">Lost</option>
+            <option value="Found">Found</option>
+          </select>
+
+          <input type="text" id="name" placeholder="Item name" required>
+          <textarea id="desc" placeholder="Description" required></textarea>
+          <input type="file" id="image" accept="image/*" required>
+
+          <button type="submit">Submit Item</button>
+        </form>
+
+        <div id="items"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS (VERY IMPORTANT: at bottom) -->
+  <script src="script.js"></script>
+</body>
+</html>
