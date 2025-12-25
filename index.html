@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>Lost and Found System</title>
 
-  <!-- Mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff416c">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -16,28 +19,16 @@
     <div class="card">
       <h1>ʟᴏꜱᴛ ᴀɴᴅ ꜰᴏᴜɴᴅ ꜱʏꜱᴛᴇᴍ</h1>
 
-      <!-- AUTH SECTION -->
       <div id="auth">
-        <div class="input-group">
-          <input type="email" id="email" placeholder="Email">
-        </div>
-
-        <div class="input-group">
-          <input type="password" id="password" placeholder="Password">
-        </div>
-
-        <button id="loginBtn" type="button">Login</button>
-        <button id="registerBtn" type="button">Register</button>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Register</button>
       </div>
 
-      <!-- APP SECTION -->
       <div id="app" style="display:none;">
-        <div style="position: sticky; top: 0; background: rgba(0,0,0,0.3); padding-bottom: 10px;">
-          <h2>Welcome!</h2>
-          <button id="logoutBtn" type="button">Logout</button>
-        </div>
-
-        <hr>
+        <h2>Welcome!</h2>
+        <button id="logoutBtn">Logout</button>
 
         <form id="itemForm">
           <select id="type">
@@ -57,7 +48,11 @@
     </div>
   </div>
 
-  <!-- JS (VERY IMPORTANT: at bottom) -->
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>
